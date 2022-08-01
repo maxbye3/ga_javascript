@@ -1,0 +1,23 @@
+{
+  "name": "ga",
+  "version": "1.0.0",
+  "description": "<h3> Readme </h3>",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxbye3/ga_javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxbye3/ga_javascript/issues"
+  },
+  "homepage": "https://github.com/maxbye3/ga_javascript#readme"
+}
