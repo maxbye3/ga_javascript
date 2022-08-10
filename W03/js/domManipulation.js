@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
     
 window.onload = function() {
     // TURNED ALL BULLETPOINTS GREEN
@@ -13,6 +14,16 @@ window.onload = function() {
     document.body.appendChild(main_heading);
 
     document.getElementById("loadStatus").innerText = "loading...";
+ 
+
+    $('#jqueryStatusId').append('ID');
+
+    $('#jqueryStatusId').css('color', 'blue');
+    $('.jqueryStatusClassname').append('CLASSNAME');
+
+    $('.bulletContainer li p').css({'margin': '20px' , 'color': 'orange'});
+
+
 }
     
 
