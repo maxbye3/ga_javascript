@@ -5,6 +5,9 @@ function clickMe(){
     console.log('click me');
 }
 
-// const clickMe = () => {
-//      console.log('click me');
-// }
+/*
+* CREATING A HOVER FUNCTION
+*/
+const mouseOver = () => {
+     console.log('hovering over button!');
+}
