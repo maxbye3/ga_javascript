@@ -2,7 +2,7 @@
 * CREATING A CLICK ME FUNCTION
 */
 function clickMe(){
-    console.log('click me');
+     console.log('click me');
 }
 
 /*
@@ -12,4 +12,8 @@ const mouseOver = () => {
      console.log('hovering over button!');
 }
 
-console.log('')
+/*
+* EVENT HANDLERS
+* listening out for an event
+*/
+document.getElementById('button').addEventListener('click', clickMe);
