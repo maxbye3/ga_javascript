@@ -16,4 +16,11 @@ const mouseOver = () => {
 * EVENT HANDLERS
 * listening out for an event
 */
-document.getElementById('button').addEventListener('click', clickMe);
+// document.getElementById('button').addEventListener('click', clickMe);
+
+
+document.getElementById('inputNameSubmit').addEventListener('click', (event)=>{
+     event.preventDefault();
+     const firstName = document.getElementById('firstName').value;
+     document.getElementById('textResult').innerText = firstName;
+});
