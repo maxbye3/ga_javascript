@@ -19,6 +19,9 @@ const mouseOver = () => {
 // document.getElementById('button').addEventListener('click', clickMe);
 
 
+/*
+* FORM
+*/
 document.getElementById('inputNameSubmit').addEventListener('click', (event)=>{
      event.preventDefault();
      const firstName = document.getElementById('firstName').value;
