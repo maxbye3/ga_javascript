@@ -8,8 +8,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         
         // for loop
         for (let i = 0; i < getBlogs.length; i++) {
-            document.getElementById('blogTitles').innerHTML += `<li>${getBlogs[i].title}</li>`;
+            console.log(getBlogs[i]);
         }
     }).catch((error) => {
-        // console.log('error:', error);
+        console.log('error:', error);
     });
