@@ -29,37 +29,11 @@ the provided site architecture.
 
 __Feed sources:__
 
-Give the user the ability to pull from a multiple news sources. Here are two news sources we suggest:
-
-- [NPR One](http://dev.npr.org/)
-- [Hearst publishing group](http://developer.hearst.com/) (Cosmopolitan, Elle, Popular Mechanics, Road and Track, etc.)
-
-You should also feel free to use other news APIs; however, you will find that many APIs that do not support either [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) or [JSONp](https://en.wikipedia.org/wiki/JSONP) will result in a cross-domain restriction error ("No 'Access-Control-Allow-Origin' header is present...") in the browser. To get around this, you can use the following proxy server to filter your API requests.
-
-Let's say you wanted to use the Digg API, which has the following endpoint:
-
-`http://digg.com/api/news/popular.json`
-
-If you preface the request with the proxy server API as follows...
-
-`https://accesscontrolalloworiginall.herokuapp.com/http://digg.com/api/news/popular.json`
-
-...you should be able to use the Digg API without encountering a cross-domain restriction error. Here's a code example of how you might use the proxy server:
-
-```js
-$.get("https://accesscontrolalloworiginall.herokuapp.com/http://digg.com/api/news/popular.json", function(results){
-  console.log(results);
-  results.data.feed.forEach(function(result){
-    $("ul").append("<li>"+result.content.title+"</li>")
-  })
-})
-```
-
-If you use your own feeds, they must have APIs with the following minimum
-requirements:
+Give the user the ability to pull from a multiple news sources. 
+Heres some ideas of things that you could present from your data source(s), if information is available:
 
 - Each article must provide an image source for the circular thumbnail at the
-  left of the article.
+  left of the article. 
 - Must provide either a category, tag, or custom taxonomy to display below the
   title (of course title of article is also required).
 - Must provide a point, ranking, or some type of total impressions for the
@@ -69,46 +43,20 @@ requirements:
 
 __Feed rules:__
 
-- When the application first loads display the loading container (see below on
+- When the application first loads display a loading container (see below on
   instructions to toggle this). When you successfully retrieve information from
-  the default API hide the loader and replace the content of the `#main`
-  container with that of the API. The DOM structure of each article must adhere
-  to the `.article` structure.
-- When the user selects an article's title show the `#popUp` overlay. The
-  content of the article must be inserted in the `.container` class inside
-  `#popUp`. Make sure you remove the `.loader` class when toggling the article
-  information in the pop-up.
-- Change the link of the "Read more from source" button to that of the
-  respective article.
-- When the user selects a source from the dropdown menu on the header, replace
-  the content of the page with articles from the newly selected source. Display
-  the loading pop up when the user first selects the new source, and hide it on
+  the default API hide the loader and replace the content of with that of the API. 
+- Create a "Read more from source" button or hyperlnk that links to article source
+- Add a loading pop up when the user first selects the new source, and hide it on
   success.
 - Add an error message (either alert or a notification on the page) if the app
   cannot load from the selected feed.
 
-__Additional UI interaction rules:__
-
-- When the user clicks/taps the search icon, expand the input box. Best approach
-  for this is to toggle the `.active` class for the `#search` container. If the
-  search input box is already expanded tapping the search icon again will close
-  the input. Pressing the "Enter" key should also close the opened input box.
-  _See Bonus 2 for search filtering functionality._
-- When the app is first loading and when the user selects to load a new feed
-  from the dropdown, display the `#popUp` container with the `.loader` class.
-  You can toggle the `.hidden` class from the container to display/hide the
-  overlay container.
-- Add functionality to hide the pop-up when user selects the "X" button on the
-  pop-up.
-- Clicking/tapping the "Feedr" logo will display the main/default feed.
-
-
 #### Bonus
 
 1. Merge all feeds into one main feed in chronological order for the initial
-   view. When the user clicks/taps the "Feedr" logo at the top, they should be
-   return to this feed. This will be the new "home view."
-2. Filter feed by title according to user keyboard input on the search input
+   view. 
+2. Filter feed by title according to user keyboard input on a search input
    box. This should run the filter on every keystroke. When the input box is
    cleared, all articles should display in the respective feed.
 3. Add infinite scrolling. Start displaying only the first 20 articles and keep
@@ -126,29 +74,6 @@ __Additional UI interaction rules:__
 * A 5-10 minute **presentation** including 3 technical hurdles, 2 new things you learned, Q&A.
 
 ---
-
-### Getting Started
-
-Begin by "forking" the starter code repository. You can do so by clicking the "Fork" icon on
-the top right of [this](https://github.com/generalassembly-studio/JS-Unit-2-Project-Starter-Code) page. Once
-complete, clone the repository to your computer by running the following
-commands:
-
-```
-cd ~/Sites/
-git clone https://github.com/<your-username-here>/feedr.git
-cd feedr
-```
-
-You can then open Sublime Text and point it at the `~/Sites/feedr` directory and
-work on the below steps. As you accomplish a feature, be sure to commit it in
-Git with the following commands:
-
-```
-git add .
-git commit -m "A description of what was added"
-git push -u origin master
-```
 
 Here are some sugestions on where to start:
 
