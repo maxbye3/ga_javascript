@@ -48,7 +48,9 @@ const filterData = () => {
         return blog.id === 100;
     });
     console.log(filteredResult);
+    document.getElementById('filteredResults').innerHtml = filteredResult[0].title;
 }
 
 
 getBlog();
+
