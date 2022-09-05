@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "<h3> Readme </h3>",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "firebase": "^9.9.4",
+    "watch": "^1.0.2"
+  },
   "devDependencies": {
     "eslint": "^8.20.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node W06/js/node.js",
+    "watch": "watch 'npm run start'"
   },
   "repository": {
     "type": "git",
