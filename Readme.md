@@ -10,11 +10,7 @@ like to-do lists in that they can be infinitely personalized and there is not
 one solution that works for everybody.
 
 For our Unit 2 project we will build __Feedr__, a personalized feed reader. Our
-feed reader will pull feeds from our favorite blogs. The user will be able to
-filter between publications through the dropdown on the header menu.
-Clicking/tapping on one of the articles will load a pop up with more
-information. The user from that point will be able to either dismiss the
-additional information or go to the referenced article.
+feed reader will pull feeds from our favorite blogs.
 
 This will be our first single page app. All of our application views will be
 contained in the provided [index.html](index.html) file. Our task, after we pull from the
@@ -32,25 +28,24 @@ __Feed sources:__
 Give the user the ability to pull from a multiple news sources. 
 Heres some ideas of things that you could present from your data source(s), if information is available:
 
-- Each article must provide an image source for the circular thumbnail at the
+- Each article could provide an image source for the circular thumbnail at the
   left of the article. 
-- Must provide either a category, tag, or custom taxonomy to display below the
+- Could provide either a category, tag, or custom taxonomy to display below the
   title (of course title of article is also required).
-- Must provide a point, ranking, or some type of total impressions for the
+- Could provide a point, ranking, or some type of total impressions for the
   respective article.
-- Must provide either a full version or a summary of the article for the pop up
+- Could provide either a full version or a summary of the article for the pop up
   screen.
 
 __Feed rules:__
 
-- When the application first loads display a loading container (see below on
-  instructions to toggle this). When you successfully retrieve information from
+- When the application first loads display a loading container. When you successfully retrieve information from
   the default API hide the loader and replace the content of with that of the API. 
 - Create a "Read more from source" button or hyperlnk that links to article source
 - Add a loading pop up when the user first selects the new source, and hide it on
   success.
 - Add an error message (either alert or a notification on the page) if the app
-  cannot load from the selected feed.
+  cannot load from the selected feed
 
 #### Bonus
 
