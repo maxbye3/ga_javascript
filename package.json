@@ -1,7 +1,7 @@
 {
   "name": "ga",
   "version": "1.0.0",
-  "description": "<h3> Readme </h3>",
+  "description": "<h3> Max's package.json </h3>",
   "main": "index.js",
   "dependencies": {
     "firebase": "^9.9.4",
